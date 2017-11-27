@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditImgVC">
+            <connections>
+                <outlet property="scroView" destination="nKS-dE-pdr" id="IAb-JW-lyE"/>
+                <outlet property="switchBounds" destination="TTu-eC-rOD" id="Tdr-yA-Puu"/>
+                <outlet property="v_btn" destination="G9z-Dh-tnA" id="E4a-hL-UZb"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nKS-dE-pdr">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </scrollView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G9z-Dh-tnA">
+                    <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TiT-gl-Mri">
+                            <rect key="frame" x="0.0" y="0.0" width="187.5" height="44"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <state key="normal" title="Cancel">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="btnCancelClick:" destination="-1" eventType="touchUpInside" id="jar-8L-rvD"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="emG-He-nvP">
+                            <rect key="frame" x="187.5" y="0.0" width="187.5" height="44"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <state key="normal" title="Choose">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="btnChooseClick:" destination="-1" eventType="touchUpInside" id="c4j-Ks-lR1"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="emG-He-nvP" secondAttribute="trailing" id="CbL-kL-EqX"/>
+                        <constraint firstAttribute="bottom" secondItem="emG-He-nvP" secondAttribute="bottom" id="Czb-Ah-cox"/>
+                        <constraint firstItem="TiT-gl-Mri" firstAttribute="leading" secondItem="G9z-Dh-tnA" secondAttribute="leading" id="Vd6-0x-OUP"/>
+                        <constraint firstAttribute="bottom" secondItem="TiT-gl-Mri" secondAttribute="bottom" id="eRb-0y-SId"/>
+                        <constraint firstItem="emG-He-nvP" firstAttribute="top" secondItem="G9z-Dh-tnA" secondAttribute="top" id="mvd-c9-Uav"/>
+                        <constraint firstItem="TiT-gl-Mri" firstAttribute="top" secondItem="G9z-Dh-tnA" secondAttribute="top" id="oIF-yR-0vT"/>
+                        <constraint firstAttribute="height" constant="44" id="vzm-sn-TDd"/>
+                        <constraint firstItem="emG-He-nvP" firstAttribute="width" secondItem="TiT-gl-Mri" secondAttribute="width" id="z2V-Jt-zlp"/>
+                        <constraint firstItem="emG-He-nvP" firstAttribute="leading" secondItem="TiT-gl-Mri" secondAttribute="trailing" id="zKA-np-FTp"/>
+                    </constraints>
+                </view>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TTu-eC-rOD">
+                    <rect key="frame" x="310" y="33" width="51" height="31"/>
+                    <connections>
+                        <action selector="switchBoundsClick:" destination="-1" eventType="valueChanged" id="Tpj-Ec-HaC"/>
+                    </connections>
+                </switch>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change bounds" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96l-Ou-hIj">
+                    <rect key="frame" x="180" y="38" width="122" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+            <constraints>
+                <constraint firstItem="G9z-Dh-tnA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="0ce-k6-bD5"/>
+                <constraint firstAttribute="trailing" secondItem="G9z-Dh-tnA" secondAttribute="trailing" id="ClV-yt-JF7"/>
+                <constraint firstItem="nKS-dE-pdr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="FQg-HT-RBy"/>
+                <constraint firstItem="TTu-eC-rOD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="topMargin" constant="25" id="L9Y-DG-WSc"/>
+                <constraint firstAttribute="bottom" secondItem="nKS-dE-pdr" secondAttribute="bottom" id="OqN-bN-q3G"/>
+                <constraint firstItem="TTu-eC-rOD" firstAttribute="leading" secondItem="96l-Ou-hIj" secondAttribute="trailing" constant="8" id="RS2-sB-b15"/>
+                <constraint firstAttribute="trailing" secondItem="nKS-dE-pdr" secondAttribute="trailing" id="YXP-Ou-5c2"/>
+                <constraint firstAttribute="bottom" secondItem="G9z-Dh-tnA" secondAttribute="bottom" id="ZPS-q8-4K4"/>
+                <constraint firstItem="nKS-dE-pdr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bIi-3U-Ng8"/>
+                <constraint firstItem="96l-Ou-hIj" firstAttribute="centerY" secondItem="TTu-eC-rOD" secondAttribute="centerY" id="cNt-I1-Fgi"/>
+                <constraint firstAttribute="trailingMargin" secondItem="TTu-eC-rOD" secondAttribute="trailing" constant="8" id="gLP-4d-2bA"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

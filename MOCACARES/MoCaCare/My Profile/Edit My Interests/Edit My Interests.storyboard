@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gGg-2x-sKH">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Edit My InterestsVC-->
+        <scene sceneID="1Sh-yl-SW7">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="gGg-2x-sKH" customClass="EditMyInterestsVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nkv-fE-Em1"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bem-NM-jCp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Yml-ls-KWC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="98P-9c-ZXJ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOP-bi-sQn">
+                                        <rect key="frame" x="52" y="20" width="161.5" height="44"/>
+                                        <state key="normal" image="icon_myIntersts0_s"/>
+                                        <connections>
+                                            <action selector="btnIndividualsClick:" destination="gGg-2x-sKH" eventType="touchUpInside" id="8xy-W4-Car"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zr6-si-aKB">
+                                        <rect key="frame" x="213.5" y="20" width="161.5" height="44"/>
+                                        <state key="normal" image="icon_myIntersts1_n"/>
+                                        <connections>
+                                            <action selector="btnOrganizationsClick:" destination="gGg-2x-sKH" eventType="touchUpInside" id="VO8-JC-PwH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F1b-vy-cn2">
+                                        <rect key="frame" x="8" y="20" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="F1b-vy-cn2" secondAttribute="height" id="lMQ-sA-gJ0"/>
+                                            <constraint firstAttribute="height" constant="44" id="pO9-gW-hLu"/>
+                                        </constraints>
+                                        <state key="normal" image="icon_back"/>
+                                        <connections>
+                                            <action selector="btnBackClick:" destination="gGg-2x-sKH" eventType="touchUpInside" id="kyt-I0-KEQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="JOP-bi-sQn" firstAttribute="leading" secondItem="F1b-vy-cn2" secondAttribute="trailing" id="0qw-w8-Wy9"/>
+                                    <constraint firstItem="Zr6-si-aKB" firstAttribute="top" secondItem="JOP-bi-sQn" secondAttribute="top" id="B9K-LJ-YUG"/>
+                                    <constraint firstAttribute="trailing" secondItem="Zr6-si-aKB" secondAttribute="trailing" id="Hkf-jv-xtk"/>
+                                    <constraint firstAttribute="bottom" secondItem="Zr6-si-aKB" secondAttribute="bottom" id="Z3a-lo-sXw"/>
+                                    <constraint firstItem="Zr6-si-aKB" firstAttribute="leading" secondItem="JOP-bi-sQn" secondAttribute="trailing" id="cIs-Sg-xtI"/>
+                                    <constraint firstAttribute="bottom" secondItem="F1b-vy-cn2" secondAttribute="bottom" id="gam-K3-29j"/>
+                                    <constraint firstItem="Zr6-si-aKB" firstAttribute="width" secondItem="JOP-bi-sQn" secondAttribute="width" id="i6T-FU-AMR"/>
+                                    <constraint firstItem="F1b-vy-cn2" firstAttribute="leading" secondItem="98P-9c-ZXJ" secondAttribute="leading" constant="8" id="l3N-Ef-iAX"/>
+                                    <constraint firstAttribute="height" constant="64" id="ldP-nO-pGK"/>
+                                    <constraint firstAttribute="bottom" secondItem="JOP-bi-sQn" secondAttribute="bottom" id="sFT-2h-U1U"/>
+                                    <constraint firstItem="JOP-bi-sQn" firstAttribute="top" secondItem="98P-9c-ZXJ" secondAttribute="top" constant="20" id="vsB-VU-4Pf"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9sa-ca-Re3">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="98P-9c-ZXJ" firstAttribute="top" secondItem="Yml-ls-KWC" secondAttribute="top" id="BLh-hN-jZv"/>
+                            <constraint firstAttribute="trailing" secondItem="9sa-ca-Re3" secondAttribute="trailing" id="BNt-Mw-1gf"/>
+                            <constraint firstItem="Bem-NM-jCp" firstAttribute="top" secondItem="9sa-ca-Re3" secondAttribute="bottom" id="KGc-cS-lsu"/>
+                            <constraint firstItem="9sa-ca-Re3" firstAttribute="top" secondItem="98P-9c-ZXJ" secondAttribute="bottom" id="i9g-o7-8uH"/>
+                            <constraint firstItem="9sa-ca-Re3" firstAttribute="leading" secondItem="Yml-ls-KWC" secondAttribute="leading" id="ish-KW-NXJ"/>
+                            <constraint firstAttribute="trailing" secondItem="98P-9c-ZXJ" secondAttribute="trailing" id="wiq-LF-Nvu"/>
+                            <constraint firstItem="98P-9c-ZXJ" firstAttribute="leading" secondItem="Yml-ls-KWC" secondAttribute="leading" id="yEa-KQ-mTg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnBack" destination="F1b-vy-cn2" id="MCF-Zf-OFK"/>
+                        <outlet property="btnIndividuals" destination="JOP-bi-sQn" id="SbP-LK-2Il"/>
+                        <outlet property="btnOrganizations" destination="Zr6-si-aKB" id="V0S-T4-2je"/>
+                        <outlet property="viewContent" destination="9sa-ca-Re3" id="3jM-SO-yYL"/>
+                        <outlet property="viewNav" destination="98P-9c-ZXJ" id="gQV-x5-npa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CMX-iU-H4N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="100" y="148"/>
+        </scene>
+        <!--Edit My InterestsTVC-->
+        <scene sceneID="aeC-Z4-t9X">
+            <objects>
+                <tableViewController storyboardIdentifier="EditMyInterestsTVC" automaticallyAdjustsScrollViewInsets="NO" id="zs3-sC-38O" customClass="EditMyInterestsTVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="PMj-44-aac">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="zs3-sC-38O" id="FSa-AY-bMA"/>
+                            <outlet property="delegate" destination="zs3-sC-38O" id="BRk-5z-2zq"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3gO-zV-bDg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="798" y="148"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon_back" width="44" height="44"/>
+        <image name="icon_myIntersts0_s" width="42" height="58"/>
+        <image name="icon_myIntersts1_n" width="95" height="62"/>
+    </resources>
+</document>

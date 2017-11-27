@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="P5d-Tj-qSs">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MessagesVC-->
+        <scene sceneID="TVh-3c-jw3">
+            <objects>
+                <viewController id="P5d-Tj-qSs" customClass="MessagesVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MjJ-SM-C9c"/>
+                        <viewControllerLayoutGuide type="bottom" id="Shf-7g-aDZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="exw-zY-o8k">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cEP-xa-mKl" customClass="MyNavBar">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="jXQ-1F-ywC"/>
+                                </constraints>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ej8-JV-vGI">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <connections>
+                                    <segue destination="Rfv-Dx-gAV" kind="embed" id="VuR-Qx-xhf"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="cEP-xa-mKl" secondAttribute="trailing" id="8Ps-NQ-SCT"/>
+                            <constraint firstItem="cEP-xa-mKl" firstAttribute="top" secondItem="exw-zY-o8k" secondAttribute="top" id="ETt-x5-rdU"/>
+                            <constraint firstAttribute="trailing" secondItem="ej8-JV-vGI" secondAttribute="trailing" id="a78-gE-72q"/>
+                            <constraint firstItem="Shf-7g-aDZ" firstAttribute="top" secondItem="ej8-JV-vGI" secondAttribute="bottom" id="ngw-lD-yJr"/>
+                            <constraint firstItem="ej8-JV-vGI" firstAttribute="top" secondItem="cEP-xa-mKl" secondAttribute="bottom" id="rvN-VU-hmE"/>
+                            <constraint firstItem="ej8-JV-vGI" firstAttribute="leading" secondItem="exw-zY-o8k" secondAttribute="leading" id="s1J-54-cVH"/>
+                            <constraint firstItem="cEP-xa-mKl" firstAttribute="leading" secondItem="exw-zY-o8k" secondAttribute="leading" id="uPW-lm-e2t"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6J7-H1-fuZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="318" y="-198"/>
+        </scene>
+        <!--MessagesTVC-->
+        <scene sceneID="7Tc-X3-wRU">
+            <objects>
+                <tableViewController id="Rfv-Dx-gAV" customClass="MessagesTVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="Aw1-75-Dop">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="Rfv-Dx-gAV" id="9og-YA-cJC"/>
+                            <outlet property="delegate" destination="Rfv-Dx-gAV" id="k6f-7e-EIC"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5kO-9g-2PR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="964" y="-170"/>
+        </scene>
+    </scenes>
+</document>

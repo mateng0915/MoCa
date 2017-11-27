@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Exo2-Thin.otf">
+            <string>Exo2-Thin</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="85" id="KGk-i7-Jjw" customClass="EditMyInterestsCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="85"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="84.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HMG-uK-c0v">
+                        <rect key="frame" x="232" y="27" width="80" height="30"/>
+                        <color key="backgroundColor" red="0.36862745098039218" green="0.80392156862745101" blue="0.58823529411764708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="eu8-fH-qz4"/>
+                            <constraint firstAttribute="width" constant="80" id="mA7-Lb-a3k"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <state key="normal" title="Following">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="btnFollowClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="yFJ-V6-bQf"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfd-6s-qx5">
+                        <rect key="frame" x="84.5" y="10" width="139.5" height="22"/>
+                        <fontDescription key="fontDescription" name="Exo2-Thin" family="Exo 2" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Des" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rtc-Mg-djL">
+                        <rect key="frame" x="84" y="35.5" width="140" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgc-ex-I0E">
+                        <rect key="frame" x="8" y="8" width="68.5" height="68.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="hgc-ex-I0E" secondAttribute="height" id="xau-lm-b76"/>
+                        </constraints>
+                        <connections>
+                            <action selector="btnHeaderClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="v6m-i2-02I"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="HMG-uK-c0v" firstAttribute="leading" secondItem="pfd-6s-qx5" secondAttribute="trailing" constant="8" id="1W4-03-jf4"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="hgc-ex-I0E" secondAttribute="bottom" id="2wg-l2-B77"/>
+                    <constraint firstItem="pfd-6s-qx5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="4cR-6t-5FL"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="HMG-uK-c0v" secondAttribute="trailing" id="Iup-aP-jm4"/>
+                    <constraint firstItem="hgc-ex-I0E" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="K5r-Sw-ST9"/>
+                    <constraint firstItem="HMG-uK-c0v" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="O7a-ap-SIx"/>
+                    <constraint firstItem="Rtc-Mg-djL" firstAttribute="leading" secondItem="pfd-6s-qx5" secondAttribute="leading" id="QwO-rl-AMP"/>
+                    <constraint firstItem="pfd-6s-qx5" firstAttribute="leading" secondItem="hgc-ex-I0E" secondAttribute="trailing" constant="8" id="YJ4-Za-21c"/>
+                    <constraint firstItem="Rtc-Mg-djL" firstAttribute="top" secondItem="pfd-6s-qx5" secondAttribute="bottom" constant="4" id="ZBz-vl-NjV"/>
+                    <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="Rtc-Mg-djL" secondAttribute="bottom" constant="2" id="Zi5-Sa-cL8"/>
+                    <constraint firstItem="hgc-ex-I0E" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="pO9-h9-cz8"/>
+                    <constraint firstItem="Rtc-Mg-djL" firstAttribute="trailing" secondItem="pfd-6s-qx5" secondAttribute="trailing" id="qR7-sD-s9m"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="btnFollow" destination="HMG-uK-c0v" id="gLF-gO-Y1y"/>
+                <outlet property="btnHeader" destination="hgc-ex-I0E" id="SFY-Qf-16D"/>
+                <outlet property="lblDes" destination="Rtc-Mg-djL" id="ZV0-lV-Smz"/>
+                <outlet property="lblName" destination="pfd-6s-qx5" id="fgW-ak-rks"/>
+            </connections>
+            <point key="canvasLocation" x="44" y="76.5"/>
+        </tableViewCell>
+    </objects>
+</document>

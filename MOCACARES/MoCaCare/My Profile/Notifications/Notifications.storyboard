@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wk2-yn-ZV8">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--NotificationsVC-->
+        <scene sceneID="O24-Lb-3eT">
+            <objects>
+                <viewController id="wk2-yn-ZV8" customClass="NotificationsVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aN0-l5-07e"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ica-TV-okB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NUv-VO-ib4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cRE-yF-aZ9" customClass="MyNavBar">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="hzH-ye-GrL"/>
+                                </constraints>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9wO-sB-TAf">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <connections>
+                                    <segue destination="KXB-x9-CVH" kind="embed" id="Zv3-rR-i7p"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9wO-sB-TAf" firstAttribute="top" secondItem="cRE-yF-aZ9" secondAttribute="bottom" id="4to-af-NMa"/>
+                            <constraint firstItem="cRE-yF-aZ9" firstAttribute="leading" secondItem="NUv-VO-ib4" secondAttribute="leading" id="6JL-mb-vrZ"/>
+                            <constraint firstAttribute="trailing" secondItem="9wO-sB-TAf" secondAttribute="trailing" id="CNF-SM-NrG"/>
+                            <constraint firstAttribute="trailing" secondItem="cRE-yF-aZ9" secondAttribute="trailing" id="IDf-vl-7nS"/>
+                            <constraint firstItem="cRE-yF-aZ9" firstAttribute="top" secondItem="NUv-VO-ib4" secondAttribute="top" id="b9X-XP-B9d"/>
+                            <constraint firstItem="Ica-TV-okB" firstAttribute="top" secondItem="9wO-sB-TAf" secondAttribute="bottom" id="isu-Gi-gqx"/>
+                            <constraint firstItem="9wO-sB-TAf" firstAttribute="leading" secondItem="NUv-VO-ib4" secondAttribute="leading" id="t3y-iq-rF9"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VV4-eV-TLU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="382" y="-148"/>
+        </scene>
+        <!--NotificationsTVC-->
+        <scene sceneID="eEi-uV-OQ4">
+            <objects>
+                <tableViewController id="KXB-x9-CVH" customClass="NotificationsTVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="Nsj-Yf-Zbr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="KXB-x9-CVH" id="dLe-Jk-5sw"/>
+                            <outlet property="delegate" destination="KXB-x9-CVH" id="lM2-Ng-ijC"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aeq-5s-LQi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1060" y="-120"/>
+        </scene>
+    </scenes>
+</document>
